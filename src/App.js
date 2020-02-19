@@ -7,6 +7,7 @@ import './App.scss';
 function App() {
 
   const [movieData,setMovieData] = useState([]);
+  const [genreList, setGenreList] = useState([]);
 
   const getTrendingMovies = async () => {
     const response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`);
@@ -14,11 +15,16 @@ function App() {
     setMovieData(json.results);    
   } 
 
-
+  const getGenreList = async () => {
+    const response = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
+    const json = await response.json();
+    setGenreList(json.genres);
+  }
 
   useEffect(() => {
     getTrendingMovies();
-  })
+    getGenreList();
+  },[])
 
   return (
     <div className="App">
@@ -28,9 +34,8 @@ function App() {
           {movieData.map((movie) => {
             return(
               <div className="column is-one-quarter">
-                <Movie movieData={movie} />
+                <Movie movieData={movie} genreList={genreList}  />
               </div>
-              
             )
           })}
         </div>
