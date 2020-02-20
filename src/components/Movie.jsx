@@ -14,6 +14,7 @@ const Movie = ({movieData,genreList}) => {
                     <br/>
                     {movieGenres.map( (id) => <span>{id.name} </span>)}
                 </div>
+                <div className="readMore">Read More</div>
             </div>
 
         </div>

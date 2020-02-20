@@ -30,6 +30,7 @@ html{
 
 .movieInfo{
   flex-grow: 1;
+  position:relative;
 }
 
 .movieTitle{
@@ -43,4 +44,12 @@ html{
 .movieText{
   padding:20px;
   text-align: left;
+}
+
+.readMore{
+  width: 100%;
+  padding:10px;
+  position:absolute;
+  bottom:0;
+  border-top:1px solid #ebebeb;
 }
