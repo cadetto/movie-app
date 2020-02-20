@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Movie = ({movieData,genreList}) => {
     const movieGenres = genreList.filter( genre => movieData.genre_ids.includes(genre.id)) ;
@@ -14,7 +15,9 @@ const Movie = ({movieData,genreList}) => {
                     <br/>
                     {movieGenres.map( (id) => <span>{id.name} </span>)}
                 </div>
-                <div className="readMore">Read More</div>
+                <Link to={`movie/${movieData.id}`}>
+                    <div className="readMore">Read More</div>
+                </Link>
             </div>
 
         </div>
