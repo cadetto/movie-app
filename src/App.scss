@@ -1,5 +1,13 @@
 @import "bulma";
 
+html{
+  background:#ebebeb;
+}
+
+.movieContainer{
+  width:80%;
+  margin:auto;
+}
 
 .App {
   text-align: center;
@@ -11,5 +19,28 @@
 }
 
 .movie{
-  padding:30px;
+  display:flex;
+  border-radius:5px;
+  background:#fff;
+}
+
+.moviePoster{
+  border-radius:5px 0 0 5px;
+}
+
+.movieInfo{
+  flex-grow: 1;
+}
+
+.movieTitle{
+  width: 100%;
+  background:#fff;
+  padding:10px;
+  border-radius:0 5px 0 0;
+  border-bottom:1px solid #ebebeb;
+}
+
+.movieText{
+  padding:20px;
+  text-align: left;
 }

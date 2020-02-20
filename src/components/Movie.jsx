@@ -5,9 +5,17 @@ const Movie = ({movieData,genreList}) => {
 
     return(
         <div className="movie">
-            <h1>{movieData.title}</h1>
-            <img src={`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`} alt=""/>
-            {movieGenres.map( (id) => <p>{id.name}</p>)}
+            <img className="moviePoster" src={`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`} alt=""/>
+            <div className="movieInfo">
+                <h3 className="movieTitle">{movieData.title}</h3>
+                <div className="movieText">
+                    {movieData.overview.split(" ").splice(0,20).join(" ")}...
+                    <br/>
+                    <br/>
+                    {movieGenres.map( (id) => <span>{id.name} </span>)}
+                </div>
+            </div>
+
         </div>
     )
 }

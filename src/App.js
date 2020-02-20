@@ -30,11 +30,14 @@ function App() {
     <div className="App">
       <NavBar />
       <div className="container">
-        <div className="columns is-multiline">
+        <div className="columns is-multiline movieContainer">
+          <div class="column is-full">
+            <h1 class="title">Trending movies</h1>
+          </div>
           {movieData.map((movie) => {
             return(
-              <div className="column is-one-quarter">
-                <Movie movieData={movie} genreList={genreList}  />
+              <div className="column is-half">
+                <Movie movieData={movie} genreList={genreList} />
               </div>
             )
           })}
