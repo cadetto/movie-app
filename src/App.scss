@@ -1,45 +1,47 @@
 @import "bulma";
 
+html{
+  background:#ebebeb;
+}
+
+.movieContainer{
+  width:80%;
+  margin:auto;
+}
+
 
 .App {
   text-align: center;
 }
 
-.red{
-  background:$red;
+.trendingMoviesContainer{
+  display:flex;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie{
+  display:flex;
+  border-radius:5px;
+  background:#fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.moviePoster{
+  border-radius:5px 0 0 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movieInfo{
+  flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.movieTitle{
+  width: 100%;
+  background:#fff;
+  padding:10px;
+  border-radius:0 5px 0 0;
+  border-bottom:1px solid #ebebeb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movieText{
+  padding:20px;
+  text-align: left;
 }
