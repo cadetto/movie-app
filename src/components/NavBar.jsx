@@ -13,7 +13,6 @@ const NavBar = () => {
 
                 <div className="navbar-end">
                     <div className="navbar-item">
-                        <button className="button is-primary">Movies</button>
                     </div>
                 </div>
             </div>
