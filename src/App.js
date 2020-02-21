@@ -40,6 +40,7 @@ function App() {
               <div class="column is-full">
                 <h1 class="title">Trending movies</h1>
               </div>
+
               {movieData.map((movie) => {
                 return(
                   <div className="column is-half">
@@ -50,9 +51,7 @@ function App() {
             </div>
           </div>
         </Route>
-
         <Route path="/movie/:movieId" component={SingleMovie} />
-
       </Switch>
           
     </div>
