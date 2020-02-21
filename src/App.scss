@@ -1,4 +1,3 @@
-@import "bulma";
 
 html{
   background:#ebebeb;
@@ -52,4 +51,28 @@ html{
   position:absolute;
   bottom:0;
   border-top:1px solid #ebebeb;
+}
+
+.singleMovieInfo{
+  display:flex;
+  align-items: center !important;
+  justify-content: center !important;
+  color:#fff;
+  padding: 0 20%;
+  
+}
+
+.singleMovieText{
+  text-align: left;
+  padding-left:30px;
+  height: 100%;
+}
+
+.SingleMovieTitle{
+  font-size:3em;
+}
+
+.SingleMoviePoster{
+  display: flex;
+  align-items: center;
 }

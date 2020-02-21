@@ -4,9 +4,22 @@ import {useParams} from 'react-router-dom';
 
 const SingleMovie = (props) => {
 
-    const [movieDetails, setMovieDetails] = useState({});
+
+
+    const [movieDetails, setMovieDetails] = useState({
+        'genres':[]
+    });
     const {movieId}= useParams();
 
+    const backdropMovie = {
+        backgroundImage:`linear-gradient(
+            rgba(0,0,0,0.70),
+            rgba(0,0,0,0.70)
+        ), url(https://image.tmdb.org/t/p/w1280/${movieDetails.backdrop_path})`,
+        backgroundSize:'cover',
+        backgroundRepeat:'no-repeat',
+        backgroundPosition:'center center'
+    };
 
     useEffect(() => {
         
@@ -20,7 +33,24 @@ const SingleMovie = (props) => {
     },[movieId]);
 
     return(
-    <h1 className="title">{movieDetails.original_title}</h1>
+        <div className="hero is-fullheight-with-navbar" style={backdropMovie}>
+            <div className="hero-body">
+                <div className="singleMovieInfo">
+                    <div className="singleMoviePoster">
+                        <img src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`} alt=""/>
+                    </div>
+                    <div className="singleMovieText">
+                        <h1 className="SingleMovieTitle">{movieDetails.title}</h1>
+                        <p>{movieDetails.overview}</p>
+                        <br />
+                        <p>{movieDetails.genres.map(genre => genre.name + ' ')} </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+   
     )
 
 }

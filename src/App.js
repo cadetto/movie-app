@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Movie from './components/Movie';
 import SingleMovie from './components/SingleMovie';
+import 'bulma/css/bulma.css'
 import './App.scss';
 
 
